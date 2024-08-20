@@ -1,5 +1,5 @@
 import vertexai
-from langchain.embeddings import VertexAIEmbeddings
+from langchain_google_vertexai import VertexAIEmbeddings
 from langchain_community.document_loaders import TextLoader
 from langchain.text_splitter import CharacterTextSplitter
 from langchain_community.vectorstores import Chroma
@@ -30,7 +30,7 @@ vertexai.init(
     staging_bucket=BUCKET,
 )
 
-# embeddings model
+# embeddings generation model
 vertex_embeddings = VertexAIEmbeddings(model_name="textembedding-gecko@003")
 
 
@@ -123,6 +123,7 @@ def process_file(fileobj, search_query):
         loader = TextLoader(file_path)
         documents = loader.load()
 
+        # split the documents into chunks
         text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
         context = "\n\n".join(str(p.page_content) for p in documents)
         texts = text_splitter.split_text(context)
@@ -191,17 +192,17 @@ def process_file(fileobj, search_query):
     
     
     
-# with gr.Blocks() as demo:
-#     with gr.Tabs():
-#         with gr.TabItem("Text Embeddings + ChromaDB + Text Bison"):
+with gr.Blocks() as demo:
+    with gr.Tabs():
+        with gr.TabItem("Text Embeddings + ChromaDB + Text Bison"):
 
-#             app = gr.Interface(
-#                 fn=process_file,
-#                 inputs=["file", "text"],
-#                 outputs=["textbox"],
-#                 title="Question Answering bot",
-#                 description="Input context and question, then get answers!",
-#             )
+            app = gr.Interface(
+                fn=process_file,
+                inputs=["file", "text"],
+                outputs=["textbox"],
+                title="Question Answering bot",
+                description="Input context and question, then get answers!",
+            )
 
-# demo.launch(debug=True)
+demo.launch(debug=True)
      
