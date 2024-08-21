@@ -7,20 +7,20 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-vertexai = "^1.63.0"
 python-dotenv = "^1.0.1"
 langchain = "^0.2.14"
 langchain-community = "^0.2.12"
 gradio = "^4.41.0"
 python-pptx = "^1.0.2"
-langchain-google-vertexai = "^1.0.8"
 pypdf = "^4.3.1"
 chromadb = "^0.5.5"
 docx2txt = "^0.8"
-google-cloud-aiplatform = "^1.63.0"
 python-docx = "^1.1.2"
 pypdf2 = "^3.0.1"
-protobuf = "^5.27.3"
+protobuf = "3.20.2"
+google-cloud-aiplatform = "1.60.0"
+langchain-google-vertexai = "1.0.5"
+vertexai = "1.60.0"
 
 
 [tool.poetry.group.dev.dependencies]

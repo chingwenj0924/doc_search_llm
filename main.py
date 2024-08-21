@@ -52,6 +52,10 @@ def generate_embeddings_and_vector(texts):
     Returns:
         A Chroma vector index ready for similarity search
     """
+    # Chroma.from_texts: 
+    # We pass all the splitted chunks created earlier, an embedding model to create the vector store.
+    
+    # as_retriver() return VectorStoreRetriever initialized from this VectorStore.
     vector_index = Chroma.from_texts(texts, vertex_embeddings).as_retriever()
     return vector_index
 
@@ -125,6 +129,9 @@ def process_file(fileobj, search_query):
 
         # split the documents into chunks
         text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
+        
+        # constructs a single string (context) by joining the page_content of each document in the documents list. 
+        # The use of "\n\n" ensures that there are two newline characters between each document's content, 
         context = "\n\n".join(str(p.page_content) for p in documents)
         texts = text_splitter.split_text(context)
 
@@ -174,7 +181,7 @@ def process_file(fileobj, search_query):
             base_compressor=_filter, base_retriever=vector_index
         )
 
-
+        # get documents relevant to a query.
         compressed_docs = compression_retriever.get_relevant_documents(
             search_query
         )

@@ -1091,28 +1091,27 @@ tqdm = ["tqdm"]
 
 [[package]]
 name = "google-api-core"
-version = "2.19.1"
+version = "1.34.1"
 description = "Google API client core library"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "google-api-core-2.19.1.tar.gz", hash = "sha256:f4695f1e3650b316a795108a76a1c416e6afb036199d1c1f1f110916df479ffd"},
-    {file = "google_api_core-2.19.1-py3-none-any.whl", hash = "sha256:f12a9b8309b5e21d92483bbd47ce2c445861ec7d269ef6784ecc0ea8c1fa6125"},
+    {file = "google-api-core-1.34.1.tar.gz", hash = "sha256:3399c92887a97d33038baa4bfd3bf07acc05d474b0171f333e1f641c1364e552"},
+    {file = "google_api_core-1.34.1-py3-none-any.whl", hash = "sha256:52bcc9d9937735f8a3986fa0bbf9135ae9cf5393a722387e5eced520e39c774a"},
 ]
 
 [package.dependencies]
-google-auth = ">=2.14.1,<3.0.dev0"
-googleapis-common-protos = ">=1.56.2,<2.0.dev0"
-grpcio = {version = ">=1.49.1,<2.0dev", optional = true, markers = "python_version >= \"3.11\" and extra == \"grpc\""}
-grpcio-status = {version = ">=1.49.1,<2.0.dev0", optional = true, markers = "python_version >= \"3.11\" and extra == \"grpc\""}
-proto-plus = ">=1.22.3,<2.0.0dev"
-protobuf = ">=3.19.5,<3.20.0 || >3.20.0,<3.20.1 || >3.20.1,<4.21.0 || >4.21.0,<4.21.1 || >4.21.1,<4.21.2 || >4.21.2,<4.21.3 || >4.21.3,<4.21.4 || >4.21.4,<4.21.5 || >4.21.5,<6.0.0.dev0"
-requests = ">=2.18.0,<3.0.0.dev0"
+google-auth = ">=1.25.0,<3.0dev"
+googleapis-common-protos = ">=1.56.2,<2.0dev"
+grpcio = {version = ">=1.33.2,<2.0dev", optional = true, markers = "extra == \"grpc\""}
+grpcio-status = {version = ">=1.33.2,<2.0dev", optional = true, markers = "extra == \"grpc\""}
+protobuf = ">=3.19.5,<3.20.0 || >3.20.0,<3.20.1 || >3.20.1,<4.0.0dev"
+requests = ">=2.18.0,<3.0.0dev"
 
 [package.extras]
-grpc = ["grpcio (>=1.33.2,<2.0dev)", "grpcio (>=1.49.1,<2.0dev)", "grpcio-status (>=1.33.2,<2.0.dev0)", "grpcio-status (>=1.49.1,<2.0.dev0)"]
-grpcgcp = ["grpcio-gcp (>=0.2.2,<1.0.dev0)"]
-grpcio-gcp = ["grpcio-gcp (>=0.2.2,<1.0.dev0)"]
+grpc = ["grpcio (>=1.33.2,<2.0dev)", "grpcio-status (>=1.33.2,<2.0dev)"]
+grpcgcp = ["grpcio-gcp (>=0.2.2,<1.0dev)"]
+grpcio-gcp = ["grpcio-gcp (>=0.2.2,<1.0dev)"]
 
 [[package]]
 name = "google-auth"
@@ -1139,13 +1138,13 @@ requests = ["requests (>=2.20.0,<3.0.0.dev0)"]
 
 [[package]]
 name = "google-cloud-aiplatform"
-version = "1.63.0"
+version = "1.60.0"
 description = "Vertex AI API client library"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "google-cloud-aiplatform-1.63.0.tar.gz", hash = "sha256:4eb2398bed02a60ad23656b4a442b5d6efa181d11653f8c31f0a5f642c09f913"},
-    {file = "google_cloud_aiplatform-1.63.0-py2.py3-none-any.whl", hash = "sha256:857abe09d1f3f49f62000dbd2302bc653c9a4cdce67ccf65bfd5878fcc81760d"},
+    {file = "google-cloud-aiplatform-1.60.0.tar.gz", hash = "sha256:782c7f1ec0e77a7c7daabef3b65bfd506ed2b4b1dc2186753c43cd6faf8dd04e"},
+    {file = "google_cloud_aiplatform-1.60.0-py2.py3-none-any.whl", hash = "sha256:5f14159c9575f4b46335027e3ceb8fa57bd5eaa76a07f858105b8c6c034ec0d6"},
 ]
 
 [package.dependencies]
@@ -1157,7 +1156,7 @@ google-cloud-resource-manager = ">=1.3.3,<3.0.0dev"
 google-cloud-storage = ">=1.32.0,<3.0.0dev"
 packaging = ">=14.3"
 proto-plus = ">=1.22.3,<2.0.0dev"
-protobuf = ">=3.20.2,<4.21.0 || >4.21.0,<4.21.1 || >4.21.1,<4.21.2 || >4.21.2,<4.21.3 || >4.21.3,<4.21.4 || >4.21.4,<4.21.5 || >4.21.5,<6.0.0dev"
+protobuf = ">=3.19.5,<3.20.0 || >3.20.0,<3.20.1 || >3.20.1,<4.21.0 || >4.21.0,<4.21.1 || >4.21.1,<4.21.2 || >4.21.2,<4.21.3 || >4.21.3,<4.21.4 || >4.21.4,<4.21.5 || >4.21.5,<5.0.0dev"
 pydantic = "<3"
 shapely = "<3.0.0dev"
 
@@ -1166,16 +1165,16 @@ autologging = ["mlflow (>=1.27.0,<=2.1.1)"]
 cloud-profiler = ["tensorboard-plugin-profile (>=2.4.0,<3.0.0dev)", "tensorflow (>=2.4.0,<3.0.0dev)", "werkzeug (>=2.0.0,<2.1.0dev)"]
 datasets = ["pyarrow (>=10.0.1)", "pyarrow (>=14.0.0)", "pyarrow (>=3.0.0,<8.0dev)"]
 endpoint = ["requests (>=2.28.1)"]
-evaluation = ["pandas (>=1.0.0,<2.2.0)", "tqdm (>=4.23.0)"]
 full = ["cloudpickle (<3.0)", "docker (>=5.0.3)", "explainable-ai-sdk (>=1.0.0)", "fastapi (>=0.71.0,<=0.109.1)", "google-cloud-bigquery", "google-cloud-bigquery-storage", "google-cloud-logging (<4.0)", "google-vizier (>=0.1.6)", "httpx (>=0.23.0,<0.25.0)", "immutabledict", "lit-nlp (==0.4.0)", "mlflow (>=1.27.0,<=2.1.1)", "numpy (>=1.15.0)", "pandas (>=1.0.0)", "pandas (>=1.0.0,<2.2.0)", "pyarrow (>=10.0.1)", "pyarrow (>=14.0.0)", "pyarrow (>=3.0.0,<8.0dev)", "pyarrow (>=6.0.1)", "pydantic (<2)", "pyyaml (>=5.3.1,<7)", "ray[default] (>=2.4,<2.5.dev0 || >2.9.0,!=2.9.1,!=2.9.2,<=2.9.3)", "ray[default] (>=2.5,<=2.9.3)", "requests (>=2.28.1)", "setuptools (<70.0.0)", "starlette (>=0.17.1)", "tensorboard-plugin-profile (>=2.4.0,<3.0.0dev)", "tensorflow (>=2.3.0,<3.0.0dev)", "tensorflow (>=2.3.0,<3.0.0dev)", "tensorflow (>=2.4.0,<3.0.0dev)", "tqdm (>=4.23.0)", "urllib3 (>=1.21.1,<1.27)", "uvicorn[standard] (>=0.16.0)", "werkzeug (>=2.0.0,<2.1.0dev)"]
-langchain = ["langchain (>=0.1.16,<0.3)", "langchain-core (<0.3)", "langchain-google-vertexai (<2)", "openinference-instrumentation-langchain (>=0.1.19,<0.2)", "orjson (<=3.10.6)", "tenacity (<=8.3)"]
-langchain-testing = ["absl-py", "cloudpickle (>=3.0,<4.0)", "google-cloud-trace (<2)", "langchain (>=0.1.16,<0.3)", "langchain-core (<0.3)", "langchain-google-vertexai (<2)", "openinference-instrumentation-langchain (>=0.1.19,<0.2)", "opentelemetry-exporter-gcp-trace (<2)", "opentelemetry-sdk (<2)", "orjson (<=3.10.6)", "pydantic (>=2.6.3,<3)", "pytest-xdist", "tenacity (<=8.3)"]
+langchain = ["langchain (>=0.1.16,<0.3)", "langchain-core (<0.3)", "langchain-google-vertexai (<2)", "openinference-instrumentation-langchain (>=0.1.19,<0.2)", "tenacity (<=8.3)"]
+langchain-testing = ["absl-py", "cloudpickle (>=3.0,<4.0)", "google-cloud-trace (<2)", "langchain (>=0.1.16,<0.3)", "langchain-core (<0.3)", "langchain-google-vertexai (<2)", "openinference-instrumentation-langchain (>=0.1.19,<0.2)", "opentelemetry-exporter-gcp-trace (<2)", "opentelemetry-sdk (<2)", "pydantic (>=2.6.3,<3)", "pytest-xdist", "tenacity (<=8.3)"]
 lit = ["explainable-ai-sdk (>=1.0.0)", "lit-nlp (==0.4.0)", "pandas (>=1.0.0)", "tensorflow (>=2.3.0,<3.0.0dev)"]
 metadata = ["numpy (>=1.15.0)", "pandas (>=1.0.0)"]
 pipelines = ["pyyaml (>=5.3.1,<7)"]
 prediction = ["docker (>=5.0.3)", "fastapi (>=0.71.0,<=0.109.1)", "httpx (>=0.23.0,<0.25.0)", "starlette (>=0.17.1)", "uvicorn[standard] (>=0.16.0)"]
 preview = ["cloudpickle (<3.0)", "google-cloud-logging (<4.0)"]
 private-endpoints = ["requests (>=2.28.1)", "urllib3 (>=1.21.1,<1.27)"]
+rapid-evaluation = ["pandas (>=1.0.0,<2.2.0)", "tqdm (>=4.23.0)"]
 ray = ["google-cloud-bigquery", "google-cloud-bigquery-storage", "immutabledict", "pandas (>=1.0.0,<2.2.0)", "pyarrow (>=6.0.1)", "pydantic (<2)", "ray[default] (>=2.4,<2.5.dev0 || >2.9.0,!=2.9.1,!=2.9.2,<=2.9.3)", "ray[default] (>=2.5,<=2.9.3)", "setuptools (<70.0.0)"]
 ray-testing = ["google-cloud-bigquery", "google-cloud-bigquery-storage", "immutabledict", "pandas (>=1.0.0,<2.2.0)", "pyarrow (>=6.0.1)", "pydantic (<2)", "pytest-xdist", "ray[default] (>=2.4,<2.5.dev0 || >2.9.0,!=2.9.1,!=2.9.2,<=2.9.3)", "ray[default] (>=2.5,<=2.9.3)", "ray[train] (==2.9.3)", "scikit-learn", "setuptools (<70.0.0)", "tensorflow", "torch (>=2.0.0,<2.1.0)", "xgboost", "xgboost-ray"]
 reasoningengine = ["cloudpickle (>=3.0,<4.0)", "google-cloud-trace (<2)", "opentelemetry-exporter-gcp-trace (<2)", "opentelemetry-sdk (<2)", "pydantic (>=2.6.3,<3)"]
@@ -1254,26 +1253,25 @@ protobuf = ">=3.20.2,<4.21.0 || >4.21.0,<4.21.1 || >4.21.1,<4.21.2 || >4.21.2,<4
 
 [[package]]
 name = "google-cloud-storage"
-version = "2.18.2"
+version = "2.14.0"
 description = "Google Cloud Storage API client library"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "google_cloud_storage-2.18.2-py2.py3-none-any.whl", hash = "sha256:97a4d45c368b7d401ed48c4fdfe86e1e1cb96401c9e199e419d289e2c0370166"},
-    {file = "google_cloud_storage-2.18.2.tar.gz", hash = "sha256:aaf7acd70cdad9f274d29332673fcab98708d0e1f4dceb5a5356aaef06af4d99"},
+    {file = "google-cloud-storage-2.14.0.tar.gz", hash = "sha256:2d23fcf59b55e7b45336729c148bb1c464468c69d5efbaee30f7201dd90eb97e"},
+    {file = "google_cloud_storage-2.14.0-py2.py3-none-any.whl", hash = "sha256:8641243bbf2a2042c16a6399551fbb13f062cbc9a2de38d6c0bb5426962e9dbd"},
 ]
 
 [package.dependencies]
-google-api-core = ">=2.15.0,<3.0.0dev"
-google-auth = ">=2.26.1,<3.0dev"
+google-api-core = ">=1.31.5,<2.0.dev0 || >2.3.0,<3.0.0dev"
+google-auth = ">=2.23.3,<3.0dev"
 google-cloud-core = ">=2.3.0,<3.0dev"
 google-crc32c = ">=1.0,<2.0dev"
-google-resumable-media = ">=2.7.2"
+google-resumable-media = ">=2.6.0"
 requests = ">=2.18.0,<3.0.0dev"
 
 [package.extras]
-protobuf = ["protobuf (<6.0.0dev)"]
-tracing = ["opentelemetry-api (>=1.1.0)"]
+protobuf = ["protobuf (<5.0.0dev)"]
 
 [[package]]
 name = "google-crc32c"
@@ -1600,19 +1598,19 @@ protobuf = ["grpcio-tools (>=1.65.5)"]
 
 [[package]]
 name = "grpcio-status"
-version = "1.65.5"
+version = "1.48.2"
 description = "Status proto mapping for gRPC"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.6"
 files = [
-    {file = "grpcio_status-1.65.5-py3-none-any.whl", hash = "sha256:44a445ce55375545a913e005be36fbec7999a4cc320d7aecb7a4469d3d49366c"},
-    {file = "grpcio_status-1.65.5.tar.gz", hash = "sha256:2c9fa3af32efd26f01837d44305dce106973bc5357b9a9fc8bbd87bb8bf833d1"},
+    {file = "grpcio-status-1.48.2.tar.gz", hash = "sha256:53695f45da07437b7c344ee4ef60d370fd2850179f5a28bb26d8e2aa1102ec11"},
+    {file = "grpcio_status-1.48.2-py3-none-any.whl", hash = "sha256:2c33bbdbe20188b2953f46f31af669263b6ee2a9b2d38fa0d36ee091532e21bf"},
 ]
 
 [package.dependencies]
 googleapis-common-protos = ">=1.5.5"
-grpcio = ">=1.65.5"
-protobuf = ">=5.26.1,<6.0dev"
+grpcio = ">=1.48.2"
+protobuf = ">=3.12.0"
 
 [[package]]
 name = "h11"
@@ -2200,22 +2198,22 @@ typing-extensions = ">=4.7"
 
 [[package]]
 name = "langchain-google-vertexai"
-version = "1.0.8"
+version = "1.0.5"
 description = "An integration package connecting Google VertexAI and LangChain"
 optional = false
 python-versions = "<4.0,>=3.8.1"
 files = [
-    {file = "langchain_google_vertexai-1.0.8-py3-none-any.whl", hash = "sha256:e35fb910604bfb05704f191bf17998e7f841a92f21677a0219c4f3a97de945c3"},
-    {file = "langchain_google_vertexai-1.0.8.tar.gz", hash = "sha256:db5b28aca9ae2cd0a775d97ec25374f9efac05e0ad336cb1cd5ca665e47b3fc3"},
+    {file = "langchain_google_vertexai-1.0.5-py3-none-any.whl", hash = "sha256:38f4a39bf35927d744d0883907c4d4a59eef059e9b36f28bb5c737c2aae6963b"},
+    {file = "langchain_google_vertexai-1.0.5.tar.gz", hash = "sha256:50005dc12ff9d66bbbab9e1ab660574b1584eee3e7b5a647dc8a009a94f0c500"},
 ]
 
 [package.dependencies]
-google-cloud-aiplatform = ">=1.56.0,<2.0.0"
-google-cloud-storage = ">=2.17.0,<3.0.0"
-langchain-core = ">=0.2.25,<0.3"
+google-cloud-aiplatform = ">=1.47.0,<2.0.0"
+google-cloud-storage = ">=2.14.0,<3.0.0"
+langchain-core = ">=0.2.2,<0.3"
 
 [package.extras]
-anthropic = ["anthropic[vertexai] (>=0.30.0,<1)"]
+anthropic = ["anthropic[vertexai] (>=0.23.0,<1)"]
 
 [[package]]
 name = "langchain-text-splitters"
@@ -3458,22 +3456,33 @@ testing = ["google-api-core (>=1.31.5)"]
 
 [[package]]
 name = "protobuf"
-version = "5.27.3"
-description = ""
+version = "3.20.2"
+description = "Protocol Buffers"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.7"
 files = [
-    {file = "protobuf-5.27.3-cp310-abi3-win32.whl", hash = "sha256:dcb307cd4ef8fec0cf52cb9105a03d06fbb5275ce6d84a6ae33bc6cf84e0a07b"},
-    {file = "protobuf-5.27.3-cp310-abi3-win_amd64.whl", hash = "sha256:16ddf3f8c6c41e1e803da7abea17b1793a97ef079a912e42351eabb19b2cffe7"},
-    {file = "protobuf-5.27.3-cp38-abi3-macosx_10_9_universal2.whl", hash = "sha256:68248c60d53f6168f565a8c76dc58ba4fa2ade31c2d1ebdae6d80f969cdc2d4f"},
-    {file = "protobuf-5.27.3-cp38-abi3-manylinux2014_aarch64.whl", hash = "sha256:b8a994fb3d1c11156e7d1e427186662b64694a62b55936b2b9348f0a7c6625ce"},
-    {file = "protobuf-5.27.3-cp38-abi3-manylinux2014_x86_64.whl", hash = "sha256:a55c48f2a2092d8e213bd143474df33a6ae751b781dd1d1f4d953c128a415b25"},
-    {file = "protobuf-5.27.3-cp38-cp38-win32.whl", hash = "sha256:043853dcb55cc262bf2e116215ad43fa0859caab79bb0b2d31b708f128ece035"},
-    {file = "protobuf-5.27.3-cp38-cp38-win_amd64.whl", hash = "sha256:c2a105c24f08b1e53d6c7ffe69cb09d0031512f0b72f812dd4005b8112dbe91e"},
-    {file = "protobuf-5.27.3-cp39-cp39-win32.whl", hash = "sha256:c84eee2c71ed83704f1afbf1a85c3171eab0fd1ade3b399b3fad0884cbcca8bf"},
-    {file = "protobuf-5.27.3-cp39-cp39-win_amd64.whl", hash = "sha256:af7c0b7cfbbb649ad26132e53faa348580f844d9ca46fd3ec7ca48a1ea5db8a1"},
-    {file = "protobuf-5.27.3-py3-none-any.whl", hash = "sha256:8572c6533e544ebf6899c360e91d6bcbbee2549251643d32c52cf8a5de295ba5"},
-    {file = "protobuf-5.27.3.tar.gz", hash = "sha256:82460903e640f2b7e34ee81a947fdaad89de796d324bcbc38ff5430bcdead82c"},
+    {file = "protobuf-3.20.2-cp310-cp310-manylinux2014_aarch64.whl", hash = "sha256:09e25909c4297d71d97612f04f41cea8fa8510096864f2835ad2f3b3df5a5559"},
+    {file = "protobuf-3.20.2-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:e8fbc522303e09036c752a0afcc5c0603e917222d8bedc02813fd73b4b4ed804"},
+    {file = "protobuf-3.20.2-cp310-cp310-win32.whl", hash = "sha256:84a1544252a933ef07bb0b5ef13afe7c36232a774affa673fc3636f7cee1db6c"},
+    {file = "protobuf-3.20.2-cp310-cp310-win_amd64.whl", hash = "sha256:2c0b040d0b5d5d207936ca2d02f00f765906622c07d3fa19c23a16a8ca71873f"},
+    {file = "protobuf-3.20.2-cp36-cp36m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:3cb608e5a0eb61b8e00fe641d9f0282cd0eedb603be372f91f163cbfbca0ded0"},
+    {file = "protobuf-3.20.2-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:84fe5953b18a383fd4495d375fe16e1e55e0a3afe7b4f7b4d01a3a0649fcda9d"},
+    {file = "protobuf-3.20.2-cp37-cp37m-manylinux2014_aarch64.whl", hash = "sha256:384164994727f274cc34b8abd41a9e7e0562801361ee77437099ff6dfedd024b"},
+    {file = "protobuf-3.20.2-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:e39cf61bb8582bda88cdfebc0db163b774e7e03364bbf9ce1ead13863e81e359"},
+    {file = "protobuf-3.20.2-cp37-cp37m-win32.whl", hash = "sha256:18e34a10ae10d458b027d7638a599c964b030c1739ebd035a1dfc0e22baa3bfe"},
+    {file = "protobuf-3.20.2-cp37-cp37m-win_amd64.whl", hash = "sha256:8228e56a865c27163d5d1d1771d94b98194aa6917bcfb6ce139cbfa8e3c27334"},
+    {file = "protobuf-3.20.2-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:03d76b7bd42ac4a6e109742a4edf81ffe26ffd87c5993126d894fe48a120396a"},
+    {file = "protobuf-3.20.2-cp38-cp38-manylinux2014_aarch64.whl", hash = "sha256:f52dabc96ca99ebd2169dadbe018824ebda08a795c7684a0b7d203a290f3adb0"},
+    {file = "protobuf-3.20.2-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:f34464ab1207114e73bba0794d1257c150a2b89b7a9faf504e00af7c9fd58978"},
+    {file = "protobuf-3.20.2-cp38-cp38-win32.whl", hash = "sha256:5d9402bf27d11e37801d1743eada54372f986a372ec9679673bfcc5c60441151"},
+    {file = "protobuf-3.20.2-cp38-cp38-win_amd64.whl", hash = "sha256:9c673c8bfdf52f903081816b9e0e612186684f4eb4c17eeb729133022d6032e3"},
+    {file = "protobuf-3.20.2-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:291fb4307094bf5ccc29f424b42268640e00d5240bf0d9b86bf3079f7576474d"},
+    {file = "protobuf-3.20.2-cp39-cp39-manylinux2014_aarch64.whl", hash = "sha256:b4fdb29c5a7406e3f7ef176b2a7079baa68b5b854f364c21abe327bbeec01cdb"},
+    {file = "protobuf-3.20.2-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:7a5037af4e76c975b88c3becdf53922b5ffa3f2cddf657574a4920a3b33b80f3"},
+    {file = "protobuf-3.20.2-cp39-cp39-win32.whl", hash = "sha256:a9e5ae5a8e8985c67e8944c23035a0dff2c26b0f5070b2f55b217a1c33bbe8b1"},
+    {file = "protobuf-3.20.2-cp39-cp39-win_amd64.whl", hash = "sha256:c184485e0dfba4dfd451c3bd348c2e685d6523543a0f91b9fd4ae90eb09e8422"},
+    {file = "protobuf-3.20.2-py2.py3-none-any.whl", hash = "sha256:c9cdf251c582c16fd6a9f5e95836c90828d51b0069ad22f463761d27c6c19019"},
+    {file = "protobuf-3.20.2.tar.gz", hash = "sha256:712dca319eee507a1e7df3591e639a2b112a2f4a62d40fe7832a16fd19151750"},
 ]
 
 [[package]]
@@ -4787,17 +4796,17 @@ test = ["Cython (>=0.29.36,<0.30.0)", "aiohttp (==3.9.0b0)", "aiohttp (>=3.8.1)"
 
 [[package]]
 name = "vertexai"
-version = "1.63.0"
+version = "1.60.0"
 description = "Please run pip install vertexai to use the Vertex SDK."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "vertexai-1.63.0-py3-none-any.whl", hash = "sha256:fbd6b3bba3a26162c9bd75ad4370baa83a9c2d63e17b810f6ebb226c5f2a309e"},
-    {file = "vertexai-1.63.0.tar.gz", hash = "sha256:e41d5b1c6a31a8efefda8730e09c01f8bd81bb5294585e9d044a0506367e40b8"},
+    {file = "vertexai-1.60.0-py3-none-any.whl", hash = "sha256:98bdbbe419661bc090f75ca1184a521a7702c791083cb17fe31f244920afd1e6"},
+    {file = "vertexai-1.60.0.tar.gz", hash = "sha256:fa6a05fba255ec0b8633e3f42da01f36c6cbd320d702f4d1bc59c4006a008c7e"},
 ]
 
 [package.dependencies]
-google-cloud-aiplatform = {version = "1.63.0", extras = ["all"]}
+google-cloud-aiplatform = {version = "1.60.0", extras = ["all"]}
 
 [package.extras]
 autologging = ["mlflow (>=1.27.0,<=2.1.1)"]
@@ -5240,4 +5249,4 @@ test = ["big-O", "importlib-resources", "jaraco.functools", "jaraco.itertools", 
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "63c03f4e88ca7850856534f350b0d4fc6d469fe31485487b80cfad884d904c66"
+content-hash = "292f5a0a1ed1a97d9ef3a396b6559a0e4cd7b10e74770dc350f0c574c55f6f97"
